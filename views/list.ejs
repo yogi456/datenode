@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Time </title>
+    
+<style>
+
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script>
+        function say(){
+            alert("Hey You are Welcome !")
+        }
+    </script>
+</head>
+<body>
+
+
+
+<form class="" action="/" method="POST">
+
+<!-- Default input -->
+<label for="exampleForm2"> T0</label>
+
+<br>
+
+<form class="" action="/" method="POST">
+
+<input type="date" id="exampleForm2" name="t0" class="form-control" placeholder="dd-mm-yyyy">
+<br>
+<label for="exampleForm2"> T1</label>
+<input type="date" id="exampleForm2" name="t1" class="form-control" placeholder="dd-mm-yyyy">
+<button type="submit" class="btn btn-primary">Generate Admission Dates</button>
+
+</form>
+<!-- Default input -->
+
+
+<br>
+<label for="exampleForm2" >Last Date of Enrollment</label>
+<br>
+<input type="text" id="exampleForm2"  value="<%= trr %>" class="form-control" placeholder="dd-mm-yyyy">
+
+<br>
+<label for="exampleForm2" >First Round </label>
+<br> 
+<input type="text" id="exampleForm2" value="<%= first %>" class="form-control" placeholder="dd-mm-yyyy">
+
+<br>
+<label for="exampleForm2" > Pay Admission Fee </label>
+<br>
+<input type="text" id="exampleForm2" class="form-control" value="<%= payadfee %>" placeholder="dd-mm-yyyy">
+
+<br>
+
+ <label for="exampleForm2" > LastDate Of Admission </label>
+ <br>
+ <input type="text" id="exampleForm2" class="form-control" value="<%= lastdate %>" placeholder="dd-mm-yyyy">
+ <br>
+<label for="exampleForm2" >a._t2 </label>
+<br>
+<input type="text" id="exampleForm2" class="form-control"  value="<%= at2 %> "  placeholder="dd-mm-yyyy">
+<br>
+<label for="exampleForm2" >Enrollment Number And Verification </label>
+<br>
+<input type="text" id="exampleForm2" class="form-control" value="<%= enroll %>" placeholder="dd-mm-yyyy">
+<br>
+
+
+
+
+
+
+
+</body>
+</html>
