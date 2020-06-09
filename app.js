@@ -3,6 +3,9 @@ const bodyparser = require("body-parser")
 
 const app = express();
 
+var dateFormat = require('dateformat');
+var now = new Date();
+
 var FirstRound="";
 var PayAdmissionFee="";
 var LastDateOfAdmission="";
@@ -34,33 +37,41 @@ app.post("/",function(req,res){
 
    t0 = new Date(req.body.t0);
    t0.setDate(t0.getDate() + 19);
-    LastDateOfEnrollment = t0.toDateString();
-   console.log(LastDateOfEnrollment);
+    var date1 = t0.toDateString();
+     LastDateOfEnrollment = dateFormat(date1,"dd/mm/yyyy");
+   
  
    t0 = new Date(req.body.t0);
    t0.setDate(t0.getDate() + 9);
-    FirstRound = t0.toDateString();
+   
+    var date2 = t0.toDateString();
+    FirstRound= dateFormat(date2,"dd/mm/yyyy");
    
     t0 = new Date(req.body.t0);
    t0.setDate(t0.getDate() + 14)
-    PayAdmissionFee = t0.toDateString();
+    var date3 = t0.toDateString();
+    PayAdmissionFee = dateFormat(date3,"dd/mm/yyyy");
 
   
    t1 = new Date(req.body.t1);
    t1.setDate(t1.getDate() + 9);
-    LastDateOfAdmission = t1.toDateString();
+    var date4 = t1.toDateString();
+    LastDateOfAdmission = dateFormat(date4,"dd/mm/yyyy");
+
 
 
  
 
    t1 = new Date(req.body.t1);
    t1.setDate(t1.getDate() + 14);
-    EnrollmentNumberAndVerification = t1.toDateString();
+    var date5 = t1.toDateString();
+    EnrollmentNumberAndVerification= dateFormat(date5,"dd/mm/yyyy");
 
 
    t1 = new Date(req.body.t1);
    t1.setDate(t1.getDate() + 24);
-    DeclearationOfExamSchedule = t1.toDateString();
+    var date6 = t1.toDateString();
+    DeclearationOfExamSchedule = dateFormat(date6,"dd/mm/yyyy");
     res.redirect("/");
   
 
